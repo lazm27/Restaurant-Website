@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            position: relative;
+            list-style: none;
+            display: inline-block;
+            right: 79px;
+            top: 30px;
+            width: 115px;
+            text-align: center;
+            text-decoration: underline;
+            color: black;
+        }
+        footer{
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: burlywood;
+            color: black;
+            text-align: center;
+        }
+        .box{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 180vh;
+            
+
+        }
+        .box1{
+            width: 100%;
+            height: 90vh;
+        }
+        header{
+            height: 20vh;
+            background-color: white;
+            color: black;
+        }
+        ul{
+            float: right;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-flow: row;
+            color: white;
+        }
+        header img{
+            position: relative;
+            top: 4px;
+            left: 79px;
+            float: left;
+            width: 10vw;
+            height: 15vh;
+        }
+        .b{
+            width: 150px;
+            height: 20px;
+            position: relative;
+            right: 65px;
+            border: 2px solid black;
+            text-decoration: none;
+        }
+        .b1{
+            position: absolute;
+            left: 0px;
+            width: 150px;
+            height: 20px;
+            color: black;
+            border: 2px solid white;
+            text-decoration: none;
+            top: 40px;   
+            background-color: white;
+        }
+        .box1 img{
+            width: 100%;
+            height: 90vh;
+        }
+        .text{
+            position: absolute;
+            color: white;
+            font-size: medium;
+            left: 120px;
+            top: 550px;
+        }
+        .box2 img{
+            position: relative;
+            top: 20px;
+            width: 50vw;
+            height: 80vh;
+            align-self: center;
+            z-index: 1;
+        }
+        #menu-box{
+            display: none;
+            position: absolute;
+            margin-top: 30px;
+            margin-right: 10px;
+            background-color: beige;
+            width: 56%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: 999;
+            border: 2px solid green;
+        }
+        #close{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .box2{
+            position: relative;
+        }
+        #arrow1{
+            font-size: 40px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            color: white;
+            cursor: pointer;
+            z-index: 2;
+        }
+        #arrow2{
+            font-size: 40px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            color: white;
+            cursor: pointer;
+            z-index: 2;
+        }
+        #menu{
+            cursor: pointer;
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            height: 100vh;
+            align-items: center;
+        }
+        .t1{
+            width: 500px;
+            height: 300px;
+        }
+        .t2{
+            width: 500px;
+            height: 300px;
+        }
+        .p1{
+            width: 500px;
+            height: 200px;
+            
+        }
+        .p2{
+            width: 500px;
+            height: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo_web.jpeg" alt="Error Loading Image">
+            <ul>
+                <li id="menu">Menu</li>
+                <li id="about">About Minella's</li>
+                <li id="jobs">Jobs</li>
+                <li id="contact">Contact</li>
+                <li id="sign">Sign In</li>
+                <li class="b" id="b">Order Online Now</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="box">
+        <div class="box1">
+            <img src="cafe-interior-6.jpg" alt="None">
+            <div class="text">
+                <h2>Where Every Bite is a Delight</h2>
+                <li class="b1">Order Online Now</li>
+            </div>
+        </div>
+        <div class="box2">
+            <img src="coffee.jpeg" alt="" id="coffee" style="align-items: center;">
+            <div id="arrow1"><strong>></strong></div>
+            <div id="arrow2"><strong><</strong></div>
+        </div>
+    </div>
+    <div id="menu-box">
+        <button id="close"><strong>X</strong></button>
+        <img src="web.png" alt="" width="100%" height="100%">
+    </div>
+    <div class="container">
+        <div class="t1">
+            <img src="deliveries.jpg" alt="" width="500px" height="300px">
+            <div class="p1">
+                <h3 >Deliveries to your door</h3>
+                <br><div style="font-size: large;">We are proud ot partner with Caviar and DoorDash</div>
+            </div>
+        </div>
+        <div class="t2">
+            <img src="dineine.jpg" alt="" width="500px" height="300px">
+            <div class="p2">
+                <h3>Dine in and inside pick up</h3>
+                <br><div style="font-size: large;" style="font-family: 'Times New Roman', Times, serif;">It's this easy. Just call ahead and tell us what you like and we'll give you a time when it will be ready for you to come in and pickup. Call 610-687-1575 or you can ORDER ONLINE for pick-up.</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Terms & Condition
+        <br>Copyright@2023, Minella's Diner
+        <br>All rights reserved
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuLink = document.getElementById("menu");
+        const menuBox = document.getElementById("menu-box");
+        const closes = document.getElementById("close");
+        const arrow1=document.getElementById("arrow1")
+        const arrow2=document.getElementById("arrow2")
+        const imageUrls=["coffee.jpeg","burger.jpeg","nachos.jpeg"];
+        const Image=document.getElementById("coffee")
+        currentImg=0;
+    
+        function updateImage(){
+            Image.src=imageUrls[currentImg];
+        }
+        menuLink.addEventListener("click", function () {
+            menuBox.style.display = "block";
+        });
+        closes.addEventListener("click",function (){
+            menuBox.style.display="none";
+        });
+        arrow1.addEventListener("click",function (){
+            menuBox.style.display="none";
+        });
+        arrow2.addEventListener("click",function (){
+            menuBox.style.display="none";
+        });
+        arrow1.addEventListener("click",function(){
+            currentImg++;
+            if(currentImg>=imageUrls.length){
+                currentImg=0;
+            }
+            updateImage();
+        });
+    });
+</script>
+</html>
